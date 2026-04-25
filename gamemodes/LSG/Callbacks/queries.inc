@@ -289,7 +289,7 @@ public SQL_Whitelist(playerid,ip[])
 	RestartCheck();
 	new rows,fields;
 	cache_get_data(rows, fields);
-	if(!rows && strcmp(ip, "127.0.0.1", true) != 0)
+	if(!rows && strcmp(ip, "127.0.0.1", true) != 0 && IsProdEnvironment() && PROXYCHECK_ENABLED)
 	{
 		new formato[256];
 

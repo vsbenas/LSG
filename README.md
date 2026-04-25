@@ -6,7 +6,7 @@
 
 </center>
 
-𥇱𥇹 **Los Santos Gyvenimas** - vienas didžiausių lietuviťkų SA:MP serverių, aktyviai veikęs 2010-2026 metais. 
+🇱🇹 **Los Santos Gyvenimas** - vienas didžiausių lietuviškų SA:MP serverių, aktyviai veikęs 2010-2026 metais. 
 
 [LSGyvenimas.lt](http://www.lsgyvenimas.lt)
 
@@ -22,18 +22,23 @@
 
 **Set up database**:
 - If you don't have a MySQL server, follow the instructions under [MySQL quickstart](#mysql-quickstart).
-- Rename `.env.example` to `.env`. Fill out the details.
+- Rename `.env.example` to `.env`. Fill out the details and make sure to change the `RCON_PASSWORD` variable.
 - Create database with name given to `LSG_DB_DATABASE` in `.env`.
-- Set up the database using the `deployments/db/init.sql` script. See [DB Seeding](#db-seeding).
+- Set up the database using the `deployments/db/init.sql` script. See [DB Seeding](#db-seeding) for example commands.
 
 **Build and launch**:
 
+- Create a docker network `docker network create mynet`
 - Build the image: `docker build -t lsg .`
-- Run the server: `docker run --network host --env-file .env -it --name lsg lsg`
+- Run the server: `docker run --network mynet -p 7777:7777/udp --env-file .env -it --name lsg lsg`
 
+You're done! You can now join the server at `127.0.0.1:7777`.
 
+**Set up networking**:
 
-You're done! You can now join the server using `127.0.0.1:7777`.
+The previous setup hides real user IPs due to docker networking. This can cause issues with proxy checks, bans etc. 
+
+To make sure everything work smoothly, you should run your production server on Linux and use `--network host` for the run command.
 
 ## Known issues
  - SA:MP MySQL plugin does not connect to MySQL servers requiring SSL. Running a MySQL server locally helps to avoid this problem.
@@ -46,7 +51,7 @@ You're done! You can now join the server using `127.0.0.1:7777`.
 
 ### Building the source files
 
-The `.vscode/tasks.json` directory contains helpful build tools. In VSCode you can run the builds by pressing `CTRL`+`SHIFT`+`P` and selecting `Tasks: Run task`. Depending on your environment (Windows/Linux) you should select the appropriate task.
+The `.vscode/tasks.json` file contains helpful build macros. By default you can build the gamemode in VSCode on Windows by pressing `CTRL`+`SHIFT`+`B`. For alternative build scripts, such as building on Linux or building other source files press `CTRL`+`SHIFT`+`P` and select `Tasks: Run task`.
 
 Note that the included `Dockerfile` does not build the source files for you, but it is possible to configure it to do so.
 
@@ -66,7 +71,7 @@ docker run -d --network mynet --name mariadb -p 3306:3306 -e MARIADB_ROOT_PASSWO
 
 In your `.env` file use:
 ```
-LSG_DB_HOST=127.0.0.1
+LSG_DB_HOST=mariadb
 LSG_DB_USER=root
 LSG_DB_PASSWORD=*your password*
 LSG_DB_DATABASE=samp

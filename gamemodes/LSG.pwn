@@ -13,6 +13,18 @@
 #define DATA "-"
 #define KODUOTE "LT"
 
+// Disabled because it requires external dependencies
+new bool:EMAIL_CONFIRMATION_ENABLED = false;
+// Disabled because it requires external dependencies
+new bool:PHONE_CONFIRMATION_ENABLED = false;
+// Disabled because it does not work with docker networking
+new bool:PROXYCHECK_ENABLED = false;
+
+
+// Change this to a random string before creating your first account. If you change this afterwards all existing passwords will stop working.
+#define PASSWORD_SALT "LSGLSGLSG"
+
+
 #define COLOR_SUCCESS 0x33AA33AA
 #define COLOR_FAIL 0xFF0000AA
 #define BusinessMoney(%0) if(GetPlayerScore(playerid) > 100 && GetPlayerVirtualWorld(playerid)>= MAX_HOUSES*2) BusinessInfo[GetPlayerVirtualWorld(playerid)-MAX_HOUSES*2][bEarning]+=(%0*2/3)
@@ -43,12 +55,6 @@
 #define IsVehicleInRangeOfPoint(%0,%1,%2,%3,%4) (GetVehicleDistanceFromPoint(%0,%2,%3,%4) <= %1)
 //#define IFRR if(RERE) KillTimer(RRTimer),SetTimer("IsjungimoTime",5000,false)
 
-// Disabled because it requires external dependencies
-new EMAIL_CONFIRMATION_ENABLED = false;
-// Disabled because it requires external dependencies
-new PHONE_CONFIRMATION_ENABLED = false;
-// Change this to a random string before creating your first account. If you change this afterwards all existing passwords will stop working.
-#define PASSWORD_SALT "LSGLSGLSG"
 
 #define GUI_MYSKINS 0
 #define GUI_BALDAI 100
