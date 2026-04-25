@@ -327,7 +327,7 @@ CMD:ipsearch(playerid,params[])
 	new IP[128];
 	//if(!Pareigos(playerid,"Emigracija")) return SendClientMessage(playerid,COLOR," * Sia komanda gali naudotis tik emigruojantis adminas!");
 	if(sscanf(params,"s[24]",IP)){SendClientMessage(playerid, 0xD9E916FF, "* Rasti zaidejus pagal IP: /ipsearch [IP ADRESAS]"); return 1;}
-
+	mysql_real_escape_string(IP, IP);
 	new query[128];
 	format(query,128,"SELECT `Name`,`Xp` FROM `Account` WHERE `IP` = '%s'",IP);
 	mysql_function_query(SQL, query, true, "SQL_IpSearch", "i", playerid);
@@ -349,7 +349,7 @@ CMD:namesearch(playerid,params[])
 		SendClientMessage(playerid,YELLOW,IP);
 		return 1;
 	}
-	
+	mysql_real_escape_string(IP, IP);
 	new query[128];
 	format(query,128,"SELECT `IP` FROM `Account` WHERE `Name` = '%s'",IP);
 	mysql_function_query(SQL, query, true, "SQL_NameSearch", "i", playerid);
@@ -3477,6 +3477,7 @@ CMD:medalis(playerid,params[])
 		case 2: format(string,sizeof(string),"0xD2D2D230");
 		case 3: format(string,sizeof(string),"0x965A38FF");
 	}
+	mysql_real_escape_string(vardas, vardas);
 	new query[150];
 	format(query,sizeof(query),"INSERT INTO Spalvos (Vardas,Color) VALUES ('%s','%s') ON DUPLICATE KEY UPDATE Color='%s'",vardas,string,string);
 	mysql_query(query);
@@ -3515,6 +3516,7 @@ CMD:skirtidyr(playerid,params[])
 		if(!IsPlayerConnected(id) || id == INVALID_PLAYER_ID || playerDB[id][authstate]!=4) 
 		{ 
 			new query[128];
+			mysql_real_escape_string(vardas, vardas);
 			format(query,sizeof(query),"SELECT `Lead` FROM `Account` WHERE `Name`='%s' LIMIT 1",vardas);
 			mysql_function_query(SQL, query, true, "SQL_Skirti", "iis",playerid,laikas,vardas);
 			
@@ -3544,6 +3546,7 @@ CMD:nuimtidyr(playerid,params[])
 		if(!IsPlayerConnected(id) || id == INVALID_PLAYER_ID || playerDB[id][authstate]!=4)
 		{
 			new query[256];
+			mysql_real_escape_string(vardas, vardas);
 			format(query,sizeof(query),"SELECT `Lead` FROM `Account` WHERE `Name`='%s' LIMIT 1",vardas);
 			mysql_function_query(SQL, query, true, "SQL_Nuimti", "iss",playerid,vardas,priezastis);
 			return 1;
