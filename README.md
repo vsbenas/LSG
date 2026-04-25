@@ -6,7 +6,7 @@
 
 </center>
 
-???? **Los Santos Gyvenimas** - vienas didþiausiø lietuviðkø SA:MP serveriø, aktyviai veikæs 2010-2026 metais. 
+ðŸ‡±ðŸ‡¹ **Los Santos Gyvenimas** - vienas didÅ¾iausiÅ³ lietuviÅ¡kÅ³ SA:MP serveriÅ³, aktyviai veikÄ™s 2010-2026 metais. 
 
 [LSGyvenimas.lt](http://www.lsgyvenimas.lt)
 
@@ -46,7 +46,7 @@ You're done! You can now join the server using `127.0.0.1:7777`.
 
 ### Building the source files
 
-The `.vscode/tasks.json` directory contains helpful build tools. In VSCode you can run the builds by pressing `CTRL+SHIFT+P` and selecting `Tasks: Run task`. Depending on your environment (Windows/Linux) you should select the appropriate task.
+The `.vscode/tasks.json` directory contains helpful build tools. In VSCode you can run the builds by pressing `CTRL`+`SHIFT`+`P` and selecting `Tasks: Run task`. Depending on your environment (Windows/Linux) you should select the appropriate task.
 
 Note that the included `Dockerfile` does not build the source files for you, but it is possible to configure it to do so.
 
@@ -82,4 +82,4 @@ docker exec -i mariadb mariadb -uroot -p'your password' samp < deployments/db/in
 When a new [open.mp](http://open.mp) server binary is released, you can update the server files directly in the `bin` directory.
 
 ## License
-This project is licensed under the MIT License © 2026 Rayon Games ([rayon.lt](https://www.rayon.lt))
+This project is licensed under the MIT License Â© 2026 Rayon Games ([rayon.lt](https://www.rayon.lt))
