@@ -1,0 +1,894 @@
+TPF0TConfiguration ProfileName	(Default)DefaultPluginName
+New PluginDefaultVersion1.0DefaultAuthorUnknownUseOldSearchDialogUseOldReplaceDialogSearch_FromCaret	Search_MatchWholeWordSearch_CaseSensitiveSearch_RegEx	Search_SearchForward	OutputAutoScroll	OutputTrimRight	OutputShowLength	EnableModMarkers	EditorSettingsV´  [default]
+style=fore:clBlack,back:clWindow,size:8,font:Courier,notbold,notitalics,notunderlined,visible,noteolfilled,changeable,nothotspot
+CaretPeriod=4096
+CaretWidth=1
+CaretLineVisible=True
+CaretFore=clDefault
+CaretBack=#8080FF
+CaretAlpha=30
+SelectForeColor=clHighlightText
+SelectBackColor=clHighlight
+SelectAlpha=256
+MarkerForeColor=clWhite
+MarkerBackColor=clBtnShadow
+FoldMarginHighlightColor=clWhite
+FoldMarginColor=#EBEBEB
+WhitespaceForeColor=clYellow
+WhitespaceBackColor=clDefault
+ActiveHotspotForeColor=clAqua
+ActiveHotspotBackColor=clDefault
+ActiveHotspotUnderlined=True
+ActiveHotspotSingleLine=True
+FoldMarkerType=1
+MarkerBookmark=markertype:sciMPixMap,Alpha:256,fore:clDefault,back:clDefault
+EdgeColumn=4096
+EdgeMode=1
+EdgeColor=clSilver
+
+[extension]
+
+
+[null]
+lexer=null
+
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[Batch]
+lexer=batch
+keywords.0=name:Internal Commands::rem set if exist errorlevel for in do break call chcp cd chdir choice cls country ctty\
+date del erase dir echo exit goto loadfix loadhigh mkdir md move path pause prompt rename ren\
+rmdir rd shift time type ver verify vol com con lpt nul endlocal setlocal
+
+keywords.1=name:External Commands::
+
+style.0=name:Default
+style.1=name:Comment,fore:#909090
+style.2=name:Keyword,fore:clOlive
+style.3=name:Label,fore:clYellow
+style.4=name:Hide command char (@),fore:clFuchsia
+style.5=name:External Commands,fore:#00CCFF
+style.6=name:Variable,fore:#FF99CC
+style.7=name:Operator,fore:#C0F399
+style.8=name:String,fore:clLime
+style.9=name:String Not EOL,fore:clWhite,back:clGreen
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=rem
+CommentBoxEnd=rem
+CommentBoxMiddle=rem
+CommentBlock=rem
+CommentStreamStart=rem
+CommentStreamEnd=rem
+AssignmentOperator==
+EndOfStatementOperator=;
+[CSS]
+lexer=css
+keywords.0=name:Keywords::color background-color background-image background-repeat background-attachment background-position background font-family font-style font-variant font-weight font-size font word-spacing letter-spacing text-decoration vertical-align\
+text-transform text-align text-indent line-height margin-top margin-right margin-bottom margin-left margin padding-top padding-right padding-bottom padding-left padding border-top-width border-right-width border-bottom-width\
+border-left-width border-width border-top border-right border-bottom border-left border border-color border-style width height float clear display white-space list-style-type list-style-image\
+list-style-position list-style scrollbar-3dlight-color scrollbar-arrow-color scrollbar-base-color scrollbar-darkshadow-color scrollbar-face-color scrollbar-highlight-color scrollbar-shadow-color scrollbar-track-color
+
+keywords.1=name:Pseudo Classes::first-letter first-line link active visited first-child focus hover lang before after left right first
+
+keywords.2=name:CSS2 Keywords::border-top-color border-right-color border-bottom-color border-left-color border-color border-top-style border-right-style border-bottom-style border-left-style border-style top right bottom left position z-index direction\
+unicode-bidi min-width max-width min-height max-height overflow clip visibility content quotes counter-reset counter-increment marker-offset size marks page-break-before page-break-after\
+page-break-inside page orphans widows font-stretch font-size-adjust unicode-range units-per-em src panose-1 stemv stemh slope cap-height x-height ascent descent\
+widths bbox definition-src baseline centerline mathline topline text-shadow caption-side table-layout border-collapse border-spacing empty-cells speak-header cursor outline outline-width\
+outline-style outline-color volume speak pause-before pause-after pause cue-before cue-after cue play-during azimuth elevation speech-rate voice-family pitch pitch-range\
+stress richness speak-punctuation speak-numeral
+
+style.0=name:Default
+style.1=name:CSS1 Tag,fore:#00D0D0
+style.2=name:Class,fore:#00D0D0
+style.3=name:Pseudo Class,fore:#00D0D0
+style.4=name:Unknown Pseudo Class,fore:clRed
+style.5=name:Operator
+style.6=name:Identifiers,fore:#A0A0C0
+style.7=name:Unknown Identifiers,fore:clRed
+style.8=name:Value,fore:#99AA00
+style.9=name:Comment,fore:#909090
+style.10=name:ID,fore:#8080FF
+style.11=name:Important,fore:clWhite
+style.12=name:Directive,fore:#FFAA44
+style.13=name:Double quoted string,fore:clLime
+style.14=name:Single quoted string,fore:clLime
+style.15=name:CSS2 Tag,fore:#00A0E0
+style.16=name:Attribute
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[EmailMessage]
+lexer=email
+keywords.0=name:Header Tags::return-path received reply-to from sender resent-reply-to resent-from resent-sender date resent-date to cc resent-cc bcc resent-bcc message-id resent-message-id\
+in-reply-to references keywords comments encrypted newsgroups path followup-to expires references distribution organization summary approved lines xref mime-version\
+control also-control content-disposition mail-system-version mailer originating-client x-mailer x-newsreader apparently-to for-comment for-handling disclose-recipients alternate-recipient original-encoded-information-types errors-to return-receipt-to prevent-nondelivery-report\
+generate-delivery-report content-return content-id content-base content-location see-also obsoletes supersedes article-updates article-names content-description organisation content-identifier delivery-date expiry-date reply-by priority\
+precedence importance sensitivity incomplete-copy language content-language content-length conversion content-conversion conversion-with-loss content-type content-sgml-entity content-transfer-encoding message-type encoding content-md5 fcc\
+auto-forwarded status discarded-x400-ipms-extensions discarded-x400-mts-extensions x-beenthere x-mailman-version list-id list-unsubscribe list-archive list-post list-help list-subscribe
+
+keywords.1=name:Highlighted Header Tags::subject
+
+keywords.2=name:Keywords 1::
+
+keywords.3=name:Keywords 2::
+
+keywords.4=name:Keywords 3::
+
+keywords.5=name:Keywords 4::
+
+keywords.6=name:Keywords 5::
+
+style.0=name:Default
+style.1=name:Header Tags,fore:clRed
+style.2=name:Header Value,fore:#9797FF
+style.3=name:Highlighted Headers,fore:clLime,bold
+style.4=name:Highlighted Headers Value,fore:clFuchsia,bold
+style.5=name:Quote,fore:clGray
+style.6=name:EMail Address,fore:#D9D900
+style.7=name:Url Adresses,fore:#00F2F2,hotspot
+style.8=name:Keyword 1
+style.9=name:Keyword 2
+style.10=name:Keyword 3,fore:clGray
+style.11=name:Keyword 4
+style.12=name:Keyword 5
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[HTML]
+lexer=hypertext
+NumStyleBits=7
+keywords.0=name:HyperText::a abbr acronym address applet area b base basefont bdo big blockquote body br button caption center\
+cite code col colgroup dd del dfn dir div dl dt em fieldset font form frame frameset\
+h1 h2 h3 h4 h5 h6 head hr html i iframe img input ins isindex kbd label\
+legend li link map menu meta noframes noscript object ol optgroup option p param pre q s\
+samp script select small span strike strong style sub sup table tbody td textarea tfoot th thead\
+title tr tt u ul var xml xmlns abbr accept-charset accept accesskey action align alink alt archive\
+axis background bgcolor border cellpadding cellspacing char charoff charset checked cite class classid clear codebase codetype color\
+cols colspan compact content coords data datafld dataformatas datapagesize datasrc datetime declare defer dir disabled enctype event\
+face for frame frameborder headers height href hreflang hspace http-equiv id ismap label lang language leftmargin link\
+longdesc marginwidth marginheight maxlength media method multiple name nohref noresize noshade nowrap object onblur onchange onclick ondblclick\
+onfocus onkeydown onkeypress onkeyup onload onmousedown onmousemove onmouseover onmouseout onmouseup onreset onselect onsubmit onunload profile prompt readonly\
+rel rev rows rowspan rules scheme scope selected shape size span src standby start style summary tabindex\
+target text title topmargin type usemap valign value valuetype version vlink vspace width text password checkbox radio\
+submit reset file hidden image framespacing scrolling allowtransparency bordercolor
+
+keywords.1=name:JavaScript::abstract boolean break byte case catch char class const continue debugger default delete do double else enum\
+export extends final finally float for function goto if implements import in instanceof int interface long native\
+new package private protected public return short static super switch synchronized this throw throws transient try typeof\
+var void volatile while with
+
+keywords.2=name:VBScript::and begin case call class continue do each else elseif end erase error event exit false for\
+function get gosub goto if implement in load loop lset me mid new next not nothing on\
+or property raiseevent rem resume return rset select set stop sub then to true unload until wend\
+while with withevents attribute alias as boolean byref byte byval const compare currency date declare dim double\
+enum explicit friend global integer let lib long module object option optional preserve private public redim single\
+static string type variant
+
+keywords.3=name:Python::and assert break class continue def del elif else except exec finally for from global if import\
+in is lambda None not or pass print raise return try while yield
+
+keywords.4=name:PHP::and argv as argc break case cfunction class continue declare default do die echo else elseif empty\
+enddeclare endfor endforeach endif endswitch endwhile e_all e_parse e_error e_warning eval exit extends false for foreach function\
+global http_cookie_vars http_get_vars http_post_vars http_post_files http_env_vars http_server_vars if include include_once list new not null old_function or parent\
+php_os php_self php_version print require require_once return static switch stdclass this true var xor virtual while define\
+__file__ __line__ __sleep __wakeup
+
+keywords.5=name:DTD Keywords::ELEMENT DOCTYPE ATTLIST ENTITY NOTATION
+
+style.0=name:Text
+style.1=name:Tags,fore:#00D0D0
+style.2=name:Unknown Tags,fore:clRed
+style.3=name:Attributes,fore:#A0A0C0
+style.4=name:Unknown Attributes,fore:clRed
+style.5=name:Numbers,fore:#E00000
+style.6=name:Double quoted strings,fore:clLime
+style.7=name:Single quoted strings,fore:clLime
+style.8=name:Other inside tag
+style.9=name:Comment,fore:#909090
+style.10=name:Entities,fore:#A0A0A0,font:Times New Roman,bold
+style.11=name:XML style tag ends,fore:#00C0C0
+style.12=name:XML identifier start,fore:#A000A0
+style.13=name:XML identifier end,fore:#A000A0
+style.14=name:SCRIPT,fore:#00E6E6
+style.15=name:ASP <% ... %>,fore:clYellow
+style.16=name:ASP <% ... %>,fore:clYellow
+style.17=name:CDATA,fore:#FFDF00
+style.18=name:PHP,fore:#DDDD00
+style.19=name:Unquoted values,fore:clFuchsia
+style.20=name:XC Comment
+style.21=name:SGML tags <! ... >,fore:#00D0D0
+style.22=name:SGML command,fore:#00D0D0,bold
+style.23=name:SGML 1st param,fore:#0FFFF0
+style.24=name:SGML double string,fore:clLime
+style.25=name:SGML single string,fore:clLime
+style.26=name:SGML error,fore:clRed
+style.27=name:SGML special,fore:#3366FF
+style.28=name:SGML entity
+style.29=name:SGML comment,fore:#909090
+style.31=name:SGML block,fore:clBlue
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+style.40=name:JS Start,fore:#7F7F00
+style.41=name:JS Default,bold
+style.42=name:JS Comment,fore:#909090
+style.43=name:JS Line Comment,fore:#909090
+style.44=name:JS Doc Comment,fore:#909090,bold
+style.45=name:JS Number,fore:#E00000
+style.46=name:JS Word,fore:#00CCCC
+style.47=name:JS Keyword,fore:clOlive,bold
+style.48=name:JS Double quoted string,fore:clLime
+style.49=name:JS Single quoted string,fore:clLime
+style.50=name:JS Symbols
+style.51=name:JS EOL,fore:clWhite
+style.52=name:JS Regex,fore:#C032FF
+style.55=name:ASP JS Start,fore:#7F7F00
+style.56=name:ASP JS Default,bold
+style.57=name:ASP JS Comment,fore:#909090
+style.58=name:ASP JS Line Comment,fore:#909090
+style.59=name:ASP JS Doc Comment,fore:#909090,bold
+style.60=name:ASP JS Number,fore:#E00000
+style.61=name:ASP JS Word,fore:#E0E0E0
+style.62=name:ASP JS Keyword,fore:clOlive,bold
+style.63=name:ASP JS Double quoted string,fore:clLime
+style.64=name:ASP JS Single quoted string,fore:clLime
+style.65=name:ASP JS Symbols
+style.66=name:ASP JS EOL,fore:clWhite,back:#202020,eolfilled
+style.67=name:ASP JS Regex,fore:#C032FF
+style.71=name:VBS Default,eolfilled
+style.72=name:VBS Comment,fore:#909090,eolfilled
+style.73=name:VBS Number,fore:#E00000,eolfilled
+style.74=name:VBS KeyWord,fore:clOlive,bold,eolfilled
+style.75=name:VBS String,fore:clLime,eolfilled
+style.76=name:VBS Identifier,eolfilled
+style.77=name:VBS Unterminated string,fore:clWhite,back:#202020,eolfilled
+style.81=name:ASP Default,eolfilled
+style.82=name:ASP Comment,fore:#909090,eolfilled
+style.83=name:ASP Number,fore:#E00000,eolfilled
+style.84=name:ASP KeyWord,fore:clOlive,bold,eolfilled
+style.85=name:ASP String,fore:clLime,eolfilled
+style.86=name:ASP Identifier,eolfilled
+style.87=name:ASP Unterminated string,fore:clWhite,back:#202020,eolfilled
+style.90=name:Python Start,fore:clGray
+style.91=name:Python Default,fore:clGray,eolfilled
+style.92=name:Python Comment,fore:#909090,eolfilled
+style.93=name:Python Number,fore:#E00000,eolfilled
+style.94=name:Python String,fore:clLime,eolfilled
+style.95=name:Python Single quoted string,fore:clLime,eolfilled
+style.96=name:Python Keyword,fore:clOlive,bold,eolfilled
+style.97=name:Python Triple quotes,fore:#7F0000,back:#EFFFEF,eolfilled
+style.98=name:Python Triple double quotes,fore:#7F0000,back:#EFFFEF,eolfilled
+style.99=name:Python Class name definition,fore:clBlue,back:#EFFFEF,bold,eolfilled
+style.100=name:Python function or method name definition,fore:#007F7F,back:#EFFFEF,bold,eolfilled
+style.101=name:Python function or method name definition,back:#EFFFEF,bold,eolfilled
+style.102=name:Python Identifiers,back:#EFFFEF,eolfilled
+style.104=name:PHP Complex Variable,fore:#00D0D0,italics
+style.105=name:ASP Python Start,fore:clGray
+style.106=name:ASP Python Default,fore:clGray,eolfilled
+style.107=name:ASP Python Comment,fore:#909090,eolfilled
+style.108=name:ASP Python Number,fore:#E00000,eolfilled
+style.109=name:ASP Python String,fore:clLime,eolfilled
+style.110=name:ASP Python Single quoted string,fore:clLime,eolfilled
+style.111=name:ASP Python Keyword,fore:clOlive,bold,eolfilled
+style.112=name:ASP Python Triple quotes,fore:#7F0000,back:#CFEFCF,eolfilled
+style.113=name:ASP Python Triple double quotes,fore:#7F0000,back:#CFEFCF,eolfilled
+style.114=name:ASP Python Class name definition,fore:clBlue,back:#CFEFCF,bold,eolfilled
+style.115=name:ASP Python function or method name definition,fore:#007F7F,back:#EFFFEF,bold,eolfilled
+style.116=name:ASP Python function or method name definition,back:#CFEFCF,bold,eolfilled
+style.117=name:ASP Python Identifiers,back:#CFEFCF,eolfilled
+style.118=name:PHP Default,eolfilled
+style.119=name:PHP Double quoted string,fore:clLime
+style.120=name:PHP Single quoted string,fore:clLime
+style.121=name:PHP Keyword,fore:clOlive,bold
+style.122=name:PHP Number,fore:#E00000
+style.123=name:PHP Variable,fore:#00D0D0,italics
+style.124=name:PHP Comment,fore:#909090
+style.125=name:PHP One line Comment,fore:#909090
+style.126=name:PHP Variable in double quoted string,fore:#00D0D0,italics
+style.127=name:PHP operator
+
+CommentBoxStart=<!--
+CommentBoxEnd=-->
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=<!--
+CommentStreamEnd=-->
+AssignmentOperator==
+EndOfStatementOperator=;
+[Makefile]
+lexer=makefile
+
+style.0=name:Default
+style.1=name:Comment,fore:#909090
+style.2=name:Preprocessor,fore:clFuchsia
+style.3=name:Variable,fore:#00D0D0
+style.4=name:Operator,fore:#C0F399
+style.5=name:Target,fore:#EE0000
+style.9=name:Error,fore:clYellow,back:clRed,eolfilled
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=#
+CommentBoxEnd=#
+CommentBoxMiddle=#
+CommentBlock=#
+CommentStreamStart=#
+CommentStreamEnd=#
+AssignmentOperator==
+EndOfStatementOperator=;
+[MSSQL]
+lexer=mssql
+keywords.0=name:Statements::
+
+keywords.1=name:Data Types::
+
+keywords.2=name:System tables::
+
+keywords.3=name:Global variables::
+
+keywords.4=name:Functions::
+
+keywords.5=name:System Stored Procedures::
+
+keywords.6=name:Operators::
+
+style.0=name:Default
+style.1=name:Comment,fore:#909090
+style.2=name:Line Comment,fore:#909090
+style.3=name:Number,fore:#E00000
+style.4=name:String,fore:clLime
+style.5=name:Operator
+style.6=name:Identifier
+style.7=name:Variable
+style.8=name:Column Name
+style.9=name:Statement
+style.10=name:Data Type
+style.11=name:System Table
+style.12=name:Global Variable
+style.13=name:Function
+style.14=name:Stored Procedure
+style.15=name:Default Pref Datatype
+style.16=name:Column Name 2
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=#
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[PHP]
+lexer=hypertext
+NumStyleBits=7
+keywords.0=name:HyperText::a abbr acronym address applet area b base basefont bdo big blockquote body br button caption center\
+cite code col colgroup dd del dfn dir div dl dt em fieldset font form frame frameset\
+h1 h2 h3 h4 h5 h6 head hr html i iframe img input ins isindex kbd label\
+legend li link map menu meta noframes noscript object ol optgroup option p param pre q s\
+samp script select small span strike strong style sub sup table tbody td textarea tfoot th thead\
+title tr tt u ul var xml xmlns abbr accept-charset accept accesskey action align alink alt archive\
+axis background bgcolor border cellpadding cellspacing char charoff charset checked cite class classid clear codebase codetype color\
+cols colspan compact content coords data datafld dataformatas datapagesize datasrc datetime declare defer dir disabled enctype event\
+face for frame frameborder headers height href hreflang hspace http-equiv id ismap label lang language leftmargin link\
+longdesc marginwidth marginheight maxlength media method multiple name nohref noresize noshade nowrap object onblur onchange onclick ondblclick\
+onfocus onkeydown onkeypress onkeyup onload onmousedown onmousemove onmouseover onmouseout onmouseup onreset onselect onsubmit onunload profile prompt readonly\
+rel rev rows rowspan rules scheme scope selected shape size span src standby start style summary tabindex\
+target text title topmargin type usemap valign value valuetype version vlink vspace width text password checkbox radio\
+submit reset file hidden image framespacing scrolling allowtransparency bordercolor
+
+keywords.1=name:JavaScript::abstract boolean break byte case catch char class const continue debugger default delete do double else enum\
+export extends final finally float for function goto if implements import in instanceof int interface long native\
+new package private protected public return short static super switch synchronized this throw throws transient try typeof\
+var void volatile while with
+
+keywords.2=name:VBScript::and begin case call class continue do each else elseif end erase error event exit false for\
+function get gosub goto if implement in load loop lset me mid new next not nothing on\
+or property raiseevent rem resume return rset select set stop sub then to true unload until wend\
+while with withevents attribute alias as boolean byref byte byval const compare currency date declare dim double\
+enum explicit friend global integer let lib long module object option optional preserve private public redim single\
+static string type variant
+
+keywords.3=name:Python::and assert break class continue def del elif else except exec finally for from global if import\
+in is lambda None not or pass print raise return try while yield
+
+keywords.4=name:PHP::and argv as argc break case cfunction class continue declare default do die echo else elseif empty\
+enddeclare endfor endforeach endif endswitch endwhile e_all e_parse e_error e_warning eval exit extends false for foreach function\
+global http_cookie_vars http_get_vars http_post_vars http_post_files http_env_vars http_server_vars if include include_once list new not null old_function or parent\
+php_os php_self php_version print require require_once return static switch stdclass this true var xor virtual while define\
+__file__ __line__ __sleep __wakeup
+
+keywords.5=name:DTD Keywords::ELEMENT DOCTYPE ATTLIST ENTITY NOTATION
+
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+style.0=name:Text
+style.1=name:Tags,fore:#00D0D0
+style.2=name:Unknown Tags,fore:clRed
+style.3=name:Attributes,fore:#A0A0C0
+style.4=name:Unknown Attributes,fore:clRed
+style.5=name:Numbers,fore:#E00000
+style.6=name:Double quoted strings,fore:#AA9900
+style.7=name:Single quoted strings,fore:clLime
+style.8=name:Other inside tag
+style.9=name:Comment,fore:#909090
+style.10=name:Entities,fore:#A0A0A0,font:Times New Roman,bold
+style.11=name:XML style tag ends,fore:#00C0C0
+style.12=name:XML identifier start,fore:#A000A0
+style.13=name:XML identifier end,fore:#A000A0
+style.14=name:SCRIPT,fore:#000A0A
+style.17=name:CDATA,fore:#FFDF00
+style.18=name:PHP,fore:#DDDD00
+style.19=name:Unquoted values,fore:clFuchsia
+style.20=name:XC Comment
+style.21=name:SGML tags <! ... >,fore:#00D0D0
+style.22=name:SGML command,fore:#00D0D0,bold
+style.23=name:SGML 1st param,fore:#0FFFF0
+style.24=name:SGML double string,fore:clLime
+style.25=name:SGML single string,fore:clLime
+style.26=name:SGML error,fore:clRed
+style.27=name:SGML special,fore:#3366FF
+style.28=name:SGML entity
+style.29=name:SGML comment,fore:#909090
+style.31=name:SGML block,fore:clBlue
+style.40=name:JS Start,fore:#7F7F00
+style.41=name:JS Default,bold,eolfilled
+style.42=name:JS Comment,fore:#909090,eolfilled
+style.43=name:JS Line Comment,fore:#909090
+style.44=name:JS Doc Comment,fore:#909090,bold,eolfilled
+style.45=name:JS Number,fore:#E00000
+style.46=name:JS Word,fore:#00CCCC
+style.47=name:JS Keyword,fore:clOlive,bold
+style.48=name:JS Double quoted string,fore:clLime
+style.49=name:JS Single quoted string,fore:clLime
+style.50=name:JS Symbols
+style.51=name:JS EOL,fore:clWhite,back:#202020,eolfilled
+style.52=name:JS Regex,fore:#C032FF
+style.71=name:VBS Default,eolfilled
+style.72=name:VBS Comment,fore:#909090,eolfilled
+style.73=name:VBS Number,fore:#E00000,eolfilled
+style.74=name:VBS KeyWord,fore:clOlive,bold,eolfilled
+style.75=name:VBS String,fore:clLime,eolfilled
+style.76=name:VBS Identifier,eolfilled
+style.77=name:VBS Unterminated string,fore:clWhite,back:#202020,eolfilled
+style.90=name:Python Start,fore:clGray
+style.91=name:Python Default,fore:clGray,eolfilled
+style.92=name:Python Comment,fore:#909090,eolfilled
+style.93=name:Python Number,fore:#E00000,eolfilled
+style.94=name:Python String,fore:clLime,eolfilled
+style.95=name:Python Single quoted string,fore:clLime,eolfilled
+style.96=name:Python Keyword,fore:clOlive,bold,eolfilled
+style.97=name:Python Triple quotes,fore:#7F0000,back:#EFFFEF,eolfilled
+style.98=name:Python Triple double quotes,fore:#7F0000,back:#EFFFEF,eolfilled
+style.99=name:Python Class name definition,fore:clBlue,back:#EFFFEF,bold,eolfilled
+style.100=name:Python function or method name definition,fore:#007F7F,back:#EFFFEF,bold,eolfilled
+style.101=name:Python function or method name definition,back:#EFFFEF,bold,eolfilled
+style.102=name:Python Identifiers,back:#EFFFEF,eolfilled
+style.104=name:PHP Complex Variable,fore:#00D0D0,italics
+style.118=name:PHP Default,eolfilled
+style.119=name:PHP Double quoted string,fore:clLime
+style.120=name:PHP Single quoted string,fore:clLime
+style.121=name:PHP Keyword,fore:clOlive,bold
+style.122=name:PHP Number,fore:#E00000
+style.123=name:PHP Variable,fore:#00D0D0,italics
+style.124=name:PHP Comment,fore:#909090
+style.125=name:PHP One line Comment,fore:#909090
+style.126=name:PHP Variable in double quoted string,fore:#00D0D0,italics
+style.127=name:PHP operator
+
+CommentBoxStart=<!--
+CommentBoxEnd=-->
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=<!--
+CommentStreamEnd=-->
+AssignmentOperator==
+EndOfStatementOperator=;
+[SQL]
+lexer=sql
+keywords.0=name:Keywords::action add aggregate all alter after and as asc avg avg_row_length auto_increment between bigint bit binary blob\
+bool both by cascade case char character change check checksum column columns comment constraint create cross current_date\
+current_time current_timestamp data database databases date datetime day day_hour day_minute day_second dayofmonth dayofweek dayofyear dec decimal default\
+delayed delay_key_write delete desc describe distinct distinctrow double drop end else escape escaped enclosed enum explain exists\
+fields file first float float4 float8 flush foreign from for full function global grant grants group having\
+heap high_priority hour hour_minute hour_second hosts identified ignore in index infile inner insert insert_id int integer interval\
+int1 int2 int3 int4 int8 into if is isam join key keys kill last_insert_id leading left length\
+like lines limit load local lock logs long longblob longtext low_priority max max_rows match mediumblob mediumtext mediumint\
+middleint min_rows minute minute_second modify month monthname myisam natural numeric no not null on optimize option optionally\
+or order outer outfile pack_keys partial password precision primary procedure process processlist privileges read real references reload\
+regexp rename replace restrict returns revoke rlike row rows second select set show shutdown smallint soname sql_big_tables\
+sql_big_selects sql_low_priority_updates sql_log_off sql_log_update sql_select_limit sql_small_result sql_big_result sql_warnings straight_join starting status string table tables temporary terminated text\
+then time timestamp tinyblob tinytext tinyint trailing to type use using unique unlock unsigned update usage values\
+varchar variables varying varbinary with write when where year year_month zerofill
+
+keywords.1=name:Database Objects::
+
+keywords.2=name:PLDoc::
+
+keywords.3=name:SQL*Plus::
+
+keywords.4=name:User Keywords 1::
+
+keywords.5=name:User Keywords 2::
+
+keywords.6=name:User Keywords 3::
+
+keywords.7=name:User Keywords 4::
+
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+style.0=name:Whitespace
+style.1=name:Comment,fore:#909090
+style.2=name:Line Comment,fore:#909090
+style.3=name:Doc Comment,fore:#909090
+style.4=name:Number,fore:#E00000
+style.5=name:Keyword,fore:clOlive,bold
+style.6=name:Double quoted string,fore:clLime
+style.7=name:Character,fore:clLime
+style.8=name:SQL*Plus
+style.9=name:SQL*Plus Prompt
+style.10=name:Operators
+style.11=name:Identifier
+style.12=name:EOL if string is not closed,fore:clWhite,back:#202020,eolfilled
+style.13=name:SQL*Plus Comment
+style.15=name:Line Doc Comment,fore:#909090
+style.16=name:Keyword2,fore:clOlive,bold
+style.17=name:Doc Comment Keyword
+style.18=name:Doc Comment Keyword Error
+style.19=name:User 1
+style.20=name:User 2
+style.21=name:User 3
+style.22=name:User 4
+style.23=name:Quoted Identifier
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=#
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[XML]
+lexer=xml
+keywords.0=name:Keywords::
+
+keywords.5=name:SGML Keywords::ELEMENT DOCTYPE ATTLIST ENTITY NOTATION
+
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+style.0=name:Default
+style.1=name:Tags,fore:#00D0D0
+style.2=name:Unknown Tags,fore:clRed
+style.3=name:Attributes,fore:#A0A0C0
+style.4=name:Unknown Attributes,fore:clRed
+style.5=name:Numbers,fore:#E00000
+style.6=name:Double quoted strings,fore:clLime
+style.7=name:Single quoted strings,fore:clLime
+style.8=name:Other inside tag,fore:#E100E1
+style.9=name:Comment,fore:#909090
+style.10=name:Entities,bold
+style.11=name:XML style tag ends,fore:#E100E1
+style.12=name:XML identifier start,fore:clYellow,bold
+style.13=name:XML identifier end,fore:clYellow,bold
+style.17=name:CDATA,eolfilled
+style.18=name:XML Question,fore:#A00000
+style.19=name:Unquoted values,fore:clFuchsia
+style.21=name:SGML tags <! ... >,fore:#00D0D0
+style.22=name:SGML command,fore:#00D0D0,bold
+style.23=name:SGML 1st param,fore:#0FFFF0
+style.24=name:SGML double string,fore:clLime
+style.25=name:SGML single string,fore:clLime
+style.26=name:SGML error,fore:clYellow,back:clMaroon
+style.27=name:SGML special,fore:#3366FF
+style.28=name:SGML entity,bold
+style.29=name:SGML comment,fore:#909090
+style.31=name:SGML block,fore:#000066,back:clSilver
+
+CommentBoxStart=<!--
+CommentBoxEnd=-->
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=<!--
+CommentStreamEnd=-->
+AssignmentOperator==
+EndOfStatementOperator=;
+[Pawn]
+lexer=cpp
+keywords.0=name:Primary keywords and identifiers::bool break case const continue default delete do else enum false for if new return sizeof switch\
+while public stock true native forward state static any Float
+
+keywords.1=name:Secondary keywords and identifiers:: OnFilterScriptInit OnPlayerDisconnect Timer_Add ceildiv foreach Bit_Bits Bit_Get SetTimer ( / for ceildiv eBit_GetBit (  Bit_GetBit eBit_Let %1  eBit_Vet %1 ~ Bit_Set Bit_SetAll Object_IsValid Object_IsAttached Object_SetGateTarget Object_HasPlayer Object_HasPlayer Object_HasPlayer Object_HasPlayer Object_Loop Object_GetLimit Object_AddRem Object_Remote Object_CoOrdRemote Object_OnPlayerEnterArea Object_Broadcast YSIM_Objects Object_UpdateUnused Object_AttachRemote Object_GateClose YSI_g_sGateAreas ( =0&& (Object_GetAttach _o_sgt_y=floatround YSI_g_sGateInfo ] | YSI_g_sGateInfo ] | | eObject_SetAttach  Object_AddToUpdate Object_Object Object_Add Object_FindSector Object_AddToOOB Object_AddToLOD Object_AddToINT Object_AddToMovingList Object_AddToSector Object_Destroy Object_RemoveFromSector Object_SetPos Object_UpdateChildSectors Object_GetPos (Bit_Get &&Bit_Get (Bit_Get (Bit_Get Object_AttachToPlayer Object_UpdateAttach Object_Move Object_CheckDescendant Object_RemoveFromParent Object_AddToParent ( + + if YSI_g_sObjects YSI_g_sObjects YSI_g_sObjects if if while ( ysector=floatround if Object_OnPlayerDisconnect Object_OnPlayerEnterArea DBGP2 setproperty DBGP3 while if gate= DBGP3 if setproperty DBGP3 & if 14)&0x1FFFF)* ty= tz= s= Object_GetPos Object_SetGateTarget Object_Move Object_AddToUpdate xx)?  if returnObject_SetAreaGate Object_Remote YSIM_Objects Object_GetLimit Object_Broadcast Object_UpdateUnused Object_CoOrdRemote Object_AddRem Object_AttachRemote Object_Loop Object_OnPlayerEnterArea Object_SetViewDistance CreateDynamicObject CreatePlayerDynamicObject CreateVWDynamicObject CreatePlayerVWDynamicObject DestroyDynamicObject SetDynamicObjectPos SetDynamicObjectRot GetDynamicObjectRot Object_AddToWorld Object_RemoveFromWorld Object_AddToPlayer Object_RemoveFromPlayer Object_AddToAllWorlds Object_RemoveFromAllWorlds Object_AddToAllPlayers Object_RemoveFromAllPlayers GetDynamicObjectPos IsValidDynamicObject AttachDynamicObjectToPlayer DetachDynamicObjectFromPlayer MoveDynamicObject AttachObjectToObject Object_IsDescendant RemoveObjectFromParent StopDynamicObject Object_IsValidModel Object_SetAreaGate Object_GetGateArea 
+
+keywords.2=name:Doc Comments::a addindex addtogroup anchor arg attention author b brief bug c class code date def defgroup deprecated\
+dontinclude e em endcode endhtmlonly endif endlatexonly endlink endverbatim enum example exception f$ f[ f] file fn\
+hideinitializer htmlinclude htmlonly if image include ingroup internal invariant interface latexonly li line link mainpage name namespace\
+nosubgrouping note overload p page par param post pre ref relates remarks return retval sa section see\
+showinitializer since skip skipline struct subsection test throw todo typedef union until var verbatim verbinclude version warning\
+weakgroup $ @ < > \ & # { }
+
+keywords.3=name:Other Keywords:: FILTERSCRIPT <YSI> NO_PERSONAL_OBJECTS OBJECT_BOUNDS PLAYER_BIT_ARRAY MAX_WORLDS x y z mx my mz distance remaining flag xsector objectid areaid YSI_g_sOtherSector YSI_g_sMovingObjects YSI_g_sLODObjects YSI_g_sInteriorObjects YSI_g_sSomethingMoved sLX sLY OBJECT_BOUNDS_MINX OBJECT_BOUNDS_MINX OBJECT_BOUNDS_MINY OBJECT_BOUNDS_MINY OBJECT_BOUNDS_MAXX OBJECT_BOUNDS_MAXX OBJECT_BOUNDS_MAXY OBJECT_BOUNDS_MAXY OBJECT_BOUNDS_X_SIZE OBJECT_BOUNDS_Y_SIZE MAX_DYN_OBJECTS AVERAGE_OBJECTS_PER_SECTOR OBJECT_DISTRIBUTION OBJECT_SECTOR_SIZE OBJECT_SECTOR_SIZE OBJECT_SECTOR_SIZE OBJECT_SECTOR_SIZE OBJECT_SECTOR_SIZE OBJECT_SECTOR_SIZE OBJECT_SECTOR_SIZE OBJECT_SECTOR_SIZE OBJECT_SECTOR_SIZE OBJECT_SECTOR_X_EDGE OBJECT_SECTOR_Y_EDGE OBJECT_SECTOR_ARRAY OBJECT_REAL_X_SECTOR_SIZE OBJECT_REAL_Y_SECTOR_SIZE OBJECT_MAX_VIEW_DISTANCE DEFAULT_OBJECT_VIEW DEFAULT_OBJECT_VIEW OBJECT_SIGHT OBJECT_VIEW_RATIO OBJECT_VIEW_EDGES OBJECT_VIEW_SECTORS NO_OBJECT NO_OBJECT_CHECK NO_SECTOR OBJECT_NO_SECTOR OBJECT_LOD_SECTOR OBJECT_INT_SECTOR OBJECT_BITS OBJECT_LOOP_GRANULARITY NO_ATTACH_PLAYER NO_GATE SECTOR_CHECK_TIME SECTOR_CHECK_FREQUENCY MAY_OBJECTS OBJECT_WORLDS OBJECT_WORLD_COUNT OBJECT_WORLD_COUNT GATE_AREA_TRIGGER GATE_OPENING ONE_OVER_ROOT_TWO MAX_GATE_OBJECTS EXTENDED_GATE_CODE  if gate YSI_g_sXSectorLocations YSI_g_sYSectorLocations YSI_g_sXSectorSize YSI_g_sYSectorSize YSI_g_sObjectSectors YSI_g_sObjects YSI_g_sPlayerObjects if stock stock stock stock stock stock stock stock stock stock stock stock stock stock stock stock stock stock stock Object_Update Object_ParseSet Object_FindSectors sLastCheck Float:E_OBJECT_ITTER_DISTANCE E_OBJECT_ITTER_NEXT E_OBJECT_ITTER_LAST E_OBJECT_ITTER_OBJ Float:E_OBJECT_ITTER_X Float:E_OBJECT_ITTER_Y Float:E_OBJECT_ITTER_Z E_OBJ_SECTOR_POINTER Float:E_OBJ_SECTOR_MAX_VIEW E_OSEC_ITTER_SECTOR E_OSEC_ITTER_NEXT Float:E_OSEC_ITTER_DIFF E_OBJECT_REMOTE_ISG E_OBJECT_REMOTE_VIEW E_OBJECT_REMOTE_DESTROY E_OBJECT_REMOTE_SETPOS E_OBJECT_REMOTE_SETROT E_OBJECT_REMOTE_ADDW E_OBJECT_REMOTE_REMW E_OBJECT_REMOTE_ADDP E_OBJECT_REMOTE_REMP E_OBJECT_REMOTE_ALLWA E_OBJECT_REMOTE_ALLWR E_OBJECT_REMOTE_ALLPA E_OBJECT_REMOTE_ALLPR E_OBJECT_REMOTE_ISVALID E_OBJECT_REMOTE_DETATCH E_OBJECT_REMOTE_ATTACHOO E_OBJECT_REMOTE_REMOO E_OBJECT_REMOTE_STOP E_OBJECT_REMOTE_GETROT E_OBJECT_REMOTE_GETPOS E_OBJECT_REMOTE_MOVETO E_OBJECT_REMOTE_CHECKDESC E_OBJECT_REMOTE_GET_AREA E_OBJECT_REMOTE_GATE_POS E_OBJECT_REMOTE_GATE E_GATE_INFO_OBJECT E_GATE_INFO_TIME E_GATE_INFO_TRIGGER E_GATE_INFO_XY E_GATE_INFO_ZA 
+
+style.0=name:White space
+style.1=name:Comment,fore:#FF8000
+style.2=name:Line Comment,fore:#FF8000
+style.3=name:Doc Comment,fore:#FF8000
+style.4=name:Number,fore:#E00000
+style.5=name:Keyword,fore:#00A600
+style.6=name:Double quoted string,fore:clRed
+style.7=name:Single quoted string,fore:clRed
+style.8=name:Symbols/UUID
+style.9=name:Preprocessor,fore:#FF8000
+style.10=name:Operators,fore:clNavy
+style.11=name:Identifier,fore:clNavy
+style.12=name:EOL if string is not closed,fore:clMaroon,eolfilled
+style.13=name:Verbatim strings for C#,fore:clLime
+style.14=name:Regular expressions,fore:#C032FF
+style.15=name:Doc Comment Line,fore:#FF8000
+style.16=name:User-defined keywords,fore:clRed
+style.17=name:Comment keyword,fore:#FF8000
+style.18=name:Comment keyword error,fore:clMaroon
+style.19=name:Global classes and typedefs,fore:#0000B0
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clBlue
+style.35=name:Bad Braces,fore:clRed
+style.36=name:Control Chars,fore:clRed,notvisible
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[AMXModX]
+lexer=cpp
+keywords.0=name:Primary keywords and identifiers::bool break case const continue default delete do else enum false Float for if new return sizeof\
+switch while public stock true native forward state static any
+
+keywords.1=name:Secondary keywords and identifiers::
+
+keywords.2=name:Doc Comments::a addindex addtogroup anchor arg attention author b brief bug c class code date def defgroup deprecated\
+dontinclude e em endcode endhtmlonly endif endlatexonly endlink endverbatim enum example exception f$ f[ f] file fn\
+hideinitializer htmlinclude htmlonly if image include ingroup internal invariant interface latexonly li line link mainpage name namespace\
+nosubgrouping note overload p page par param post pre ref relates remarks return retval sa section see\
+showinitializer since skip skipline struct subsection test throw todo typedef union until var verbatim verbinclude version warning\
+weakgroup $ @ < > \ & # { }
+
+keywords.3=name:Other Keywords::
+
+style.0=name:White space
+style.1=name:Comment,fore:#FF8000
+style.2=name:Line Comment,fore:#FF8000
+style.3=name:Doc Comment,fore:#FF8000
+style.4=name:Number,fore:#E00000
+style.5=name:Keyword,fore:#00A600
+style.6=name:Double quoted string,fore:clRed
+style.7=name:Single quoted string,fore:clRed
+style.8=name:Symbols/UUID
+style.9=name:Preprocessor,fore:#FF8000
+style.10=name:Operators,fore:clNavy
+style.11=name:Identifier,fore:clNavy
+style.12=name:EOL if string is not closed,fore:clMaroon,eolfilled
+style.13=name:Verbatim strings for C#,fore:clLime
+style.14=name:Regular expressions,fore:#C032FF
+style.15=name:Doc Comment Line,fore:#FF8000
+style.16=name:User-defined keywords,fore:clRed
+style.17=name:Comment keyword,fore:#FF8000
+style.18=name:Comment keyword error,fore:clMaroon
+style.19=name:Global classes and typedefs,fore:#0000B0
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clBlue
+style.35=name:Bad Braces,fore:clRed
+style.36=name:Control Chars,fore:clRed,notvisible
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[SourceMod]
+lexer=cpp
+keywords.0=name:Primary keywords and identifiers::bool break case const continue default delete do else enum funcenum false for if new return sizeof\
+switch while public stock true native forward state static decl functag Function Plugin Handle String Action Float\
+AdminId GroupId any
+
+keywords.1=name:Secondary keywords and identifiers::
+
+keywords.2=name:Doc Comments::a addindex addtogroup anchor arg attention author b brief bug c class code date def defgroup deprecated\
+dontinclude e em endcode endhtmlonly endif endlatexonly endlink endverbatim enum example exception f$ f[ f] file fn\
+hideinitializer htmlinclude htmlonly if image include ingroup internal invariant interface latexonly li line link mainpage name namespace\
+nosubgrouping note overload p page par param post pre ref relates remarks return retval sa section see\
+showinitializer since skip skipline struct subsection test throw todo typedef union until var verbatim verbinclude version warning\
+weakgroup $ @ < > \ & # { }
+
+keywords.3=name:Other Keywords::
+
+style.0=name:White space
+style.1=name:Comment,fore:#FF8000
+style.2=name:Line Comment,fore:#FF8000
+style.3=name:Doc Comment,fore:#FF8000
+style.4=name:Number,fore:#E00000
+style.5=name:Keyword,fore:#00A600
+style.6=name:Double quoted string,fore:clRed
+style.7=name:Single quoted string,fore:clRed
+style.8=name:Symbols/UUID
+style.9=name:Preprocessor,fore:#FF8000
+style.10=name:Operators,fore:clNavy
+style.11=name:Identifier,fore:clNavy
+style.12=name:EOL if string is not closed,fore:clMaroon,eolfilled
+style.13=name:Verbatim strings for C#,fore:clLime
+style.14=name:Regular expressions,fore:#C032FF
+style.15=name:Doc Comment Line,fore:#FF8000
+style.16=name:User-defined keywords,fore:clRed
+style.17=name:Comment keyword,fore:#FF8000
+style.18=name:Comment keyword error,fore:clMaroon
+style.19=name:Global classes and typedefs,fore:#0000B0
+style.33=name:LineNumbers,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clBlue
+style.35=name:Bad Braces,fore:clRed
+style.36=name:Control Chars,fore:clRed,notvisible
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[container]
+lexer=container
+
+style.33=name:LineNumbers,fore:clBlack,back:clActiveBorder,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+[C/C++]
+lexer=cpp
+keywords.0=name:Primary keywords and identifiers::__asm _asm asm auto __automated bool break case catch __cdecl _cdecl cdecl char class __classid __closure const\
+const_cast continue __declspec default delete __dispid do double dynamic_cast else enum __except explicit __export export extern false\
+__fastcall _fastcall __finally float for friend goto if __import _import __inline inline int __int16 __int32 __int64 __int8\
+long __msfastcall __msreturn mutable namespace new __pascal _pascal pascal private __property protected public __published register reinterpret_cast return\
+__rtti short signed sizeof static_cast static __stdcall _stdcall struct switch template this __thread throw true __try try\
+typedef typeid typename union unsigned using virtual void volatile wchar_t while dllexport dllimport naked noreturn nothrow novtable\
+property selectany thread uuid
+
+keywords.1=name:Secondary keywords and identifiers::TStream TFileStream TMemoryStream TBlobStream TOleStream TStrings TStringList AnsiString String WideString cout cin cerr endl fstream ostream istream\
+wstring string deque list vector set multiset bitset map multimap stack queue priority_queue
+
+keywords.2=name:Doc Comments::a addindex addtogroup anchor arg attention author b brief bug c class code date def defgroup deprecated\
+dontinclude e em endcode endhtmlonly endif endlatexonly endlink endverbatim enum example exception f$ f[ f] file fn\
+hideinitializer htmlinclude htmlonly if image include ingroup internal invariant interface latexonly li line link mainpage name namespace\
+nosubgrouping note overload p page par param post pre ref relates remarks return retval sa section see\
+showinitializer since skip skipline struct subsection test throw todo typedef union until var verbatim verbinclude version warning\
+weakgroup $ @ < > \ & # { }
+
+keywords.3=name:Unused::
+
+keywords.4=name:Global classes and typedefs::
+
+style.0=name:White space
+style.1=name:Comment,fore:#909090
+style.2=name:Line Comment,fore:#909090
+style.3=name:Doc Comment,fore:#909090
+style.4=name:Number,fore:#E00000
+style.5=name:Keyword,fore:clOlive,bold
+style.6=name:Double quoted string,fore:clLime
+style.7=name:Single quoted string,fore:clLime
+style.8=name:Symbols/UUID
+style.9=name:Preprocessor,fore:clFuchsia
+style.10=name:Operators
+style.11=name:Identifier
+style.12=name:EOL if string is not closed,fore:clWhite,back:#202020,eolfilled
+style.13=name:Verbatim strings for C#,fore:clLime
+style.14=name:Regular expressions,fore:#C032FF
+style.15=name:Doc Comment Line
+style.16=name:User-defined keywords,fore:#00CCCC
+style.17=name:Comment keyword,fore:clLime
+style.18=name:Comment keyword error,fore:clRed
+style.19=name:Global classes and typedefs
+style.33=name:LineNumbers,fore:clBlack,back:#EBEBEB,font:Arial
+style.34=name:Ok Braces,fore:clYellow,bold
+style.35=name:Bad Braces,fore:clRed,bold
+style.36=name:Control Chars,back:clSilver
+style.37=name:Indent Guide,fore:clGray
+
+CommentBoxStart=/*
+CommentBoxEnd=*/
+CommentBoxMiddle=*
+CommentBlock=//
+CommentStreamStart=/*
+CommentStreamEnd=*/
+AssignmentOperator==
+EndOfStatementOperator=;
+StartPageSubstituteÿShowStartPageOnStart	AutoIndentTemplatesReloadSavedFilesLastUsedFiles.Strings"D:\_Sa-MP\geras\pawno\Objektai.pwn RecentFiles.Strings"D:\_Sa-MP\geras\pawno\Objektai.pwn 	LastThemeNexos5Indent_AutoIndent	Indent_IndentOpenBrace	Indent_UnindentClosingBrace	Indent_UnindentPrevLineIndent_PrevLineInsertBrace Indent_ActivateIndentationGuides	Indent_HandleOLS	Indent_IndentString	Indent_TabSize
+FTPServers RCONServers MySQLServers 	CompilersLanguageAMXModX	Arguments"%in%" -o"%out%"SaveOrigFile
+CaptureOut	AlignFirstLineCopyOnly Language	SourceMod	Arguments"%in%" -o"%out%"SaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly LanguagePawnFilename0D:\_Sa-MP\geras\pawno\pawncc.exe	Arguments"%in%" -o"%out%"	DefOutDirD:\_Sa-MP\geras\pawnoGameExec@C:\Program Files (x86)\Rockstar Games\GTA San Andreas\GTA_SA.EXESaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly LanguageBatchFilenamecmd.exe	Arguments	/C "%in%"SaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly LanguageC/C++	Arguments"%in%" -o"%out%"SaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguageCSSSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguageEMailMessageSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguageHTMLSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguageMakefileSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguageMSSQLSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguagenullSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguagePHPSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguageSQLSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	 LanguageXMLSaveOrigFile
+CaptureOut	AlignFirstLine	CopyOnly	  SortEntriesHideEmptyGroupsCS_IntelligentCommentBehavior	CS_AutoScrollBack		AC_Enable	AC_AutoShow	AC_ShowFilter	AC_TabCompletes	AC_AutoInsert	CT_Enable	CT_HighlightParams	CT_AutoHide	CT_EditorOwnsCalltip	CT_AutoShowCalltipSaveToolbarLayout  

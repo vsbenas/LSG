@@ -1,0 +1,10 @@
+_x = 925.383422
+_y = -963.714111
+_z = 35.428047
+_rot = 7.015136
+_range = 25
+_limit = 110
+_fine = 1
+_usemph = 0
+_activelabel = true
+_labeltxt = Leistinas greitis 110km/h

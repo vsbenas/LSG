@@ -1,0 +1,9 @@
+logs/log-core.log
+logs/plugins/mysql.log
+plugins/crashdetect.log
+server_log.txt
+logs/errors.log
+scriptfiles/mysqlerrors.txt
+.env
+log.txt
+bans.json

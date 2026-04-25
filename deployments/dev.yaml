@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  sampdev:
+    image: #{ContainerRegistry}#/lsg:#{BUILD.BUILDNUMBER}#
+    container_name: sampdev
+    network_mode: host
+    restart: no
+    environment:
+      LSG_DB_HOST: #{LSG_DB_HOST}#
+      LSG_DB_USER: #{LSG_DB_USER}#
+      LSG_DB_PASSWORD: #{LSG_DB_PASSWORD}#
+      LSG_DB_DATABASE: #{LSG_DB_DATABASE}#
+      RCON_PASSWORD: #{RCON_PASSWORD}#
+      SERVER_PORT: "9999"
+      SERVER_PASSWORD: "dev123"
+      ANNOUNCE: "false"

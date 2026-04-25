@@ -1,0 +1,87 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-windows",
+            "type": "shell",
+            "command": "${workspaceRoot}/pawno/pawncc.exe",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "args": [
+                "${file}",
+                "--%",
+                "-;+",
+                "-(+",
+                "-d3",
+                "-Z+"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "isBackground": false,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": "$pawncc"
+        },
+        {
+            "label": "build-linux",
+            "type": "process",
+            "command": "${workspaceRoot}/pawno/pawncc",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "args": [
+                "${file}", 
+                "-;+",
+                "-(+",
+                "-d3",
+                "-Z+",
+                "-w239", // warning 239: literal array/string passed to a non-const parameter
+                "-w214", //  warning 214: possibly a "const" array argument was intended: "string"
+                "-i${workspaceRoot}/pawno/include",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "isBackground": false,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": "$pawncc"
+        },
+        {
+            "label": "build-linux-gamemode",
+            "type": "process",
+            "command": "${workspaceRoot}/pawno/pawncc",
+            "options": {
+                "cwd": "${workspaceRoot}/gamemodes" // "${fileDirname}"
+            },
+            "args": [
+                "${workspaceRoot}/gamemodes/LSG.pwn",// "${file}", for filterscript
+                "-;+",
+                "-(+",
+                "-d3",
+                "-Z+",
+                "-w239", // warning 239: literal array/string passed to a non-const parameter
+                "-w214", //  warning 214: possibly a "const" array argument was intended: "string"
+                "-i${workspaceRoot}/pawno/include",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": false,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": "$pawncc"
+        },
+    ]
+  }

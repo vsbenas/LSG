@@ -1,0 +1,10 @@
+_x = 639.474121
+_y = -1227.522949
+_z = 15.241586
+_rot = 231.967391
+_range = 30
+_limit = 110
+_fine = 1
+_usemph = 0
+_activelabel = true
+_labeltxt = Greicio limitas 110km/h

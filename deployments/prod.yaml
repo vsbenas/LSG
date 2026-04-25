@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  samp:
+    image: #{ContainerRegistry}#/lsg:#{BUILD.BUILDNUMBER}#
+    container_name: samp
+    network_mode: host
+    restart: always
+    environment:
+      LSG_DB_HOST: #{LSG_DB_HOST}#
+      LSG_DB_USER: #{LSG_DB_USER}#
+      LSG_DB_PASSWORD: #{LSG_DB_PASSWORD}#
+      LSG_DB_DATABASE: #{LSG_DB_DATABASE}#
+      RCON_PASSWORD: #{RCON_PASSWORD}#
+      SERVER_PORT: "7777"
+      SERVER_PASSWORD: ""
+      ANNOUNCE: "true"

@@ -1,0 +1,505 @@
+forward UnjailPlayer(playerid,Float:x,Float:y,Float:z,Float:a,interior);
+
+stock Boolint(number)
+{
+	if(number>0) return true;
+	return false;
+}
+
+stock SendMessageToTeisesauga(color,text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][specialybe]==80 || playerDB[i][specialybe]==81 || playerDB[i][specialybe]==82 || playerDB[i][specialybe]==83 || playerDB[i][specialybe]==84)
+			{
+				SendClientMessage(i,color,text);
+			}
+		}
+	}
+}
+
+stock SendMessageToGidai(color,text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][specialybe]==16 || playerDB[i][specialybe]==53)
+			{
+				SendClientMessage(i,color,text);
+			}
+		}
+	}
+}
+
+stock SendMessageToTune(color,text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][specialybe]==28 || playerDB[i][specialybe]==51)
+			{
+				SendClientMessage(i,color,text);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+stock StringToInt(string[])
+{
+	new thestring[8];
+	strmid(thestring,string,0,strlen(string),sizeof(thestring));
+	return strval(thestring);
+}
+
+stock SendMessageToAutospecai(color,text[])
+{
+   for(new i=0; i<MAX_PLAYERS; i++)
+   {
+      if(IsPlayerConnected(i))
+      {
+         if(playerDB[i][specialybe]==6 || playerDB[i][specialybe]==28 )
+         {
+            SendClientMessage(i,color,text);
+         }
+      }
+   }
+}
+
+stock SendMessageToValstybe(color,text[])
+{
+   for(new i=0; i<MAX_PLAYERS; i++)
+   {
+      if(IsPlayerConnected(i))
+      {
+         if(playerDB[i][specialybe]==50 || playerDB[i][specialybe]==51)
+         {
+            SendClientMessage(i,color,text);
+         }
+      }
+   }
+}
+
+stock SendMessageToZudikas(color,text[])
+{
+   for(new i=0; i<MAX_PLAYERS; i++)
+   {
+      if(IsPlayerConnected(i))
+      {
+         if(playerDB[i][specialybe]==66)
+         {
+            SendClientMessage(i,color,text);
+         }
+      }
+   }
+}
+
+stock SendMessageToKlubai(color,text[])
+{
+   for(new i=0; i<MAX_PLAYERS; i++)
+   {
+      if(IsPlayerConnected(i))
+      {
+         if(playerDB[i][specialybe]==70 || playerDB[i][specialybe]==71 || playerDB[i][specialybe]==72 || playerDB[i][specialybe]==73)
+         {
+            SendClientMessage(i,color,text);
+         }
+      }
+   }
+}
+/*
+stock SendMessageToTeachers(color,text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][specialybe]==7)
+			{
+				SendClientMessage(i,color,text);
+			}
+		}
+	}
+}
+*/
+
+stock SendMessageToTransportas(color,text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][specialybe]==3 || playerDB[i][specialybe]==39 || playerDB[i][specialybe]==20)
+			{
+				SendClientMessage(i,color,text);
+			}	
+		}
+	}
+}
+
+stock SendMessageToMedics(color,text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][specialybe]==2)
+			{
+				SendClientMessage(i,color,text);
+			}	
+		}
+	}
+}
+
+stock SendMessageToCrew(crewid,color,text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][lektuvas]==crewid)
+			{
+				SendClientMessage(i,color,text);
+			}	
+		}
+	}
+}
+
+stock SendMessageToAdmin(text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][admin])
+			{
+				SendClientMessage(i,ADMIN_COLOR,text);
+			}	
+		}
+	}
+}
+stock SendMessageToPrez(text[])
+{
+	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if(playerDB[i][prez])
+			{
+				SendClientMessage(i,PREZ_COLOR,text);
+			}	
+		}
+	}
+}
+
+stock tohash(buf[]) {
+	new length=strlen(buf);
+    new s1 = 1;
+    new s2 = 0;
+    new n;
+    for (n=0; n<length; n++)
+    {
+       s1 = (s1 + buf[n]) % 65521;
+       s2 = (s2 + s1)     % 65521;
+    }
+    return (s2 << 16) + s1;
+}
+
+stock CheckPass(file[],password[])
+{
+	if(dini_Int(file,"slaptazodis")==tohash(password)) return true;
+	return false;
+}
+
+stock GetWeaponSlot(playerid,weapon)
+{
+	new weid,ammo;
+
+	for(new slot=0; slot < 13; slot++)
+	{
+		GetPlayerWeaponData(playerid,slot,weid,ammo);
+		if(weid == weapon)
+		{
+			return slot;
+		}
+	}
+	return -1;
+}
+
+stock Stop(playerid){
+new Float:coo[3];
+GetPlayerPos(playerid,coo[0],coo[1],coo[2]);
+SetPlayerPos(playerid,coo[0],coo[1],coo[2]);
+}
+
+stock OutputGas(playerid,vehicleid,bool:entered){
+
+new msg[256];
+
+if(entered) 
+{
+	format(msg,255,"~n~~n~~n~~n~                                 %s ~n~~y~                                 Degalai:~b~ %i l",aVehicleNames[GetVehicleModel(vehicleid)-400],vehicleDB[vehicleid][gas]);
+}else{
+	format(msg,255,"~n~~n~~n~~n~~n~~b~                                 Degalai:~b~ %i l",vehicleDB[vehicleid][gas]);
+}
+GameTextForPlayer(playerid,msg,3000,5);
+
+}
+
+stock IsTurgus(Float:x,Float:y){
+if(y < -1130.3337 && y > -1207.9764 && x < 2165.9043 && x > 2142.939) return true;
+if(y < -1418.8632 && y > -1479.5135 && x < 2823.7834 && x > 2787.7856) return true;
+if(y < -1898.7677 && y > -1922.9199 && x < 2072.4321 && x > 2049.0203) return true;
+if(y < -1783.6597 && y > -1814.5601 && x < 360.2220 && x > 305.9606) return true;
+if(y < -1029.0636 && y > -1077.9224 && x < 1800.5637 && x > 1615.3484) return true;
+if(y < -2306.3879 && y > -2368.6553 && x < 1418.1302 && x > 1359.3920) return true;
+
+
+
+
+return false; }
+
+
+stock GetArgument(argument, const string[], untillend){
+
+new index = 0;
+new end = 0;
+new returns[256]="0";
+
+for(new loop = 0; loop < argument; loop++){
+index = strfind(string," ",true,index)+1;
+if(!strcmp(string[index]," ",true,1)){return returns;}
+if (index == 0){return returns;}
+}
+if(untillend == 0){
+end = strfind(string[index]," ",true,0);}
+if (end== -1 || untillend==1) end = 256-index;
+strmid(returns,string[index],0,end);
+return returns;
+}
+
+stock GetXYInFrontOfPlayer(playerid, &Float:x, &Float:y, Float:distance)
+{       // Created by Y_Less
+
+        new Float:a;
+
+        GetPlayerPos(playerid, x, y, a);
+        GetPlayerFacingAngle(playerid, a);
+
+        if (GetPlayerVehicleID(playerid)) {
+            GetVehicleZAngle(GetPlayerVehicleID(playerid), a);
+        }
+
+        x += (distance * floatsin(-a, degrees));
+        y += (distance * floatcos(-a, degrees));
+}
+
+stock PreloadAnimLib(playerid, animlib[])
+{
+	ApplyAnimation(playerid,animlib,"null",0.0,0,0,0,0,0);
+}
+
+stock PlayerToPoint(Float:radi, playerid, Float:x, Float:y, Float:z)
+{
+    if(IsPlayerConnected(playerid))
+	{
+		new Float:oldposx, Float:oldposy, Float:oldposz;
+		new Float:tempposx, Float:tempposy, Float:tempposz;
+		GetPlayerPos(playerid, oldposx, oldposy, oldposz);
+		tempposx = (oldposx -x);
+		tempposy = (oldposy -y);
+		tempposz = (oldposz -z);
+		if (((tempposx < radi) && (tempposx > -radi)) && ((tempposy < radi) && (tempposy > -radi)) && ((tempposz < radi) && (tempposz > -radi)))
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
+stock GetPlayeridMid(name[]) //Boylett
+{
+    for (new i = 0; i < MAX_PLAYERS; i++)
+    {
+        if (IsPlayerConnected(i))
+        {
+            new gPlayerName[MAX_PLAYER_NAME];
+            GetPlayerName(i, gPlayerName, MAX_PLAYER_NAME);
+            if(strfind(gPlayerName, name, true) != -1)
+            {
+                return i;
+            }
+}
+    }
+    return INVALID_PLAYER_ID;
+}
+
+stock GetJobFromFaction(faction)
+{
+	if(faction == LEAD_TEISESAUGA)
+	{
+		for(new i=0; i<MAX_PLAYERS; i++)
+		{
+			if(playerDB[i][specialybe]==80)
+			{
+				return 80;
+			}
+			else if(playerDB[i][specialybe]==81)
+			{
+				return 81;
+			}
+			else if(playerDB[i][specialybe]==82)
+			{
+				return 82;
+			}
+			else if(playerDB[i][specialybe]==83)
+			{
+				return 83;
+			}
+			else if(playerDB[i][specialybe]==84)
+			{
+				return 84;
+			}
+		}
+		return 1;
+	}
+	else if(faction == LEAD_VALSTYBE)
+	{
+   	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(playerDB[i][specialybe]==50)
+		{
+			return 50;
+		}
+		if(playerDB[i][specialybe]==51)
+		{
+			return 51;
+		}
+	}
+	return 1;
+	}
+	else if(faction == LEAD_MEDIKAI) return 2;
+	else if(faction == LEAD_MOKYKLA) return 7;
+        else if(faction == LEAD_AUTOSPECAI)
+	{
+   	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(playerDB[i][specialybe]==6)
+		{
+			return 6;
+		}
+		if(playerDB[i][specialybe]==28)
+		{
+			return 28;
+		}
+	}
+	return 1;
+	}	
+	else if(faction == LEAD_ZUDIKAS) return 66;
+	else if(faction == LEAD_KLUBAI)
+	{
+   	for(new i=0; i<MAX_PLAYERS; i++)
+	{
+		if(playerDB[i][specialybe]==70)
+		{
+ 			return 70;
+		}
+		else if(playerDB[i][specialybe]==71)
+		{
+			return 71;
+		}
+		else if(playerDB[i][specialybe]==72)
+		{
+			return 72;
+		}
+		else if(playerDB[i][specialybe]==73)
+		{
+			return 73;
+		}
+	}
+	return 1;
+	}
+	else if(faction == LEAD_TRANSPORTAS)
+	{
+   	for(new i=0; i<MAX_PLAYERS; i++)	
+	{
+		if(playerDB[i][specialybe]==3)
+		{
+ 			return 3;
+		}
+		if(playerDB[i][specialybe]==39)
+		{
+ 			return 39;
+		}		
+		if(playerDB[i][specialybe]==20)
+		{
+ 			return 20;
+		}
+	}
+	return 1;
+	}
+	return 1;	
+}
+
+
+public UnjailPlayer(playerid,Float:x,Float:y,Float:z,Float:a,interior){
+if(!playerDB[playerid][ikalintas]) return;
+SetPlayerPos(playerid,x,y,z);
+SetPlayerFacingAngle(playerid,a);
+SetPlayerInterior(playerid,interior);
+TogglePlayerControllable(playerid,true);
+SetPlayerWantedLevel(playerid,0);
+playerDB[playerid][ikalintas]=false;
+playerDB[playerid][kalejimo_laikas]=0;}
+
+stock JailPlayer(playerid,Float:x,Float:y,Float:z,Float:a,time,interior,Float:unX,Float:unY,Float:unZ,Float:unA,unInterior,bool:controlable){
+SetTimerEx("UnjailPlayer",time,0,"iffffi",playerid,unX,unY,unZ,unA,unInterior);
+SetPlayerInterior(playerid,interior);
+SetPlayerPos(playerid,x,y,z);
+SetPlayerFacingAngle(playerid,a);
+TogglePlayerControllable(playerid,controlable);
+SetPlayerWantedLevel(playerid,0);
+playerDB[playerid][ikalintas]=true;}
+
+
+stock OutputVehicleData(lower)
+{
+	new bool:models[212],smodels[212],vehicles,tmodels;
+
+	for(new vehicle=0; vehicle<MAX_VEHICLES; vehicle++)
+	{
+		new model = GetVehicleModel(vehicle);
+		if(model > 399)
+		{
+			models[model-400]=true;
+			smodels[model-400]++;
+		}
+		if(model !=0) vehicles++;
+	}
+
+	for(new model=0;model<212; model++)
+	{
+		if(models[model]) tmodels++;
+	}
+
+	printf("Total vehicles: %i",vehicles);
+	printf("Total Models: %i",tmodels);
+	print("\nPrinting model data:\n");
+
+	for(new prints=0; prints<212; prints++)
+	{
+		if(smodels[prints] != 0 && smodels[prints] < lower)
+			printf("Number of %s(ID:%i): %i",aVehicleNames[prints],prints+400,smodels[prints]);
+	}
+
+}
+
+		

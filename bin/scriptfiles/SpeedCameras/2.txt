@@ -1,0 +1,10 @@
+_x = 1560.157104
+_y = -1740.840576
+_z = 10.546875
+_rot = 145.334991
+_range = 23
+_limit = 100
+_fine = 1
+_usemph = 0
+_activelabel = true
+_labeltxt = Greicio limitas 100km/h
