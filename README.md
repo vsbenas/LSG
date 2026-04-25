@@ -6,7 +6,7 @@
 
 </center>
 
-🇱🇹 **Los Santos Gyvenimas** - vienas didžiausių lietuviškų SA:MP serverių, aktyviai veikęs 2010-2026 metais. 
+𥇱𥇹 **Los Santos Gyvenimas** - vienas didžiausių lietuviťkų SA:MP serverių, aktyviai veikęs 2010-2026 metais. 
 
 [LSGyvenimas.lt](http://www.lsgyvenimas.lt)
 
@@ -24,7 +24,7 @@
 - If you don't have a MySQL server, follow the instructions under [MySQL quickstart](#mysql-quickstart).
 - Rename `.env.example` to `.env`. Fill out the details.
 - Create database with name given to `LSG_DB_DATABASE` in `.env`.
-- Set up the database using the `deployments/db/init.sql` script. For a local database you can use: `mysql -u root -p samp < deployments/db/init.sql`
+- Set up the database using the `deployments/db/init.sql` script. See [DB Seeding](#db-seeding).
 
 **Build and launch**:
 
@@ -71,10 +71,22 @@ LSG_DB_USER=root
 LSG_DB_PASSWORD=*your password*
 LSG_DB_DATABASE=samp
 ```
+### DB seeding
 
-You can seed this database using the commands:
+Example commands for DB seeding:
+
+**Linux**:
 ```
+# docker
 docker exec -i mariadb mariadb -uroot -p'your password' samp < deployments/db/init.sql
+# non-docker
+mariadb -uroot -p'your password' samp < deployments/db/init.sql
+```
+**Windows**:
+
+Use PowerShell:
+```
+Get-Content deployments/db/init.sql | docker exec -i mariadb mariadb -uroot -p'your password' samp
 ```
 
 ### Updating server files
