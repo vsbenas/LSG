@@ -797,7 +797,7 @@ INSERT INTO `Config` VALUES
 ('afondas','0'),
 ('amp','0'),
 ('atveztan','0'),
-('Admin','Ben-as_Vercetti'),
+('Admin','-'),
 ('Gaujos','-'),
 ('DJ','-'),
 ('Discord','-'),
