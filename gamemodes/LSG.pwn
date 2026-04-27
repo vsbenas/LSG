@@ -3983,6 +3983,9 @@ public OnPlayerSpawn(playerid)
 		//SetTimerEx("ReturnGuns", 1000, false, "i", playerid);
 	}
 
+	else if(GetPVarInt(playerid, "SpectateExiting")) {
+		SetPVarInt(playerid, "SpectateExiting", 0);
+	}
 	else {
 		//ResetPlayerWeapons(playerid);
 	
@@ -8021,6 +8024,7 @@ stock EndSpectate(playerid)
 	TextDrawHideForPlayer(playerid,Spectate[id]);
 	PlayerSpectated[id]=-1;
 
+	SetPVarInt(playerid, "SpectateExiting", 1);
 	TogglePlayerSpectating(playerid,false);
 	SetPlayerSkin(playerid,playerDB[playerid][spdata][24]);
 	SetPlayerPoz(playerid,playerDB[playerid][spos][0],playerDB[playerid][spos][1],playerDB[playerid][spos][2], _, _, 0);
