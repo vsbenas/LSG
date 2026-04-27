@@ -1244,7 +1244,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				print(str);
 				GivePlayerMoneyA(playerid, (hInfo[housenumber][Cost] /4));
 				new query[128];
-				format(query,sizeof(query),"UPDATE `Namai` SET `Name`='121',`Zole`=0,`Locked`=1,`Nark`=0,`Pinigai`=0,`Renter`='ForRent' WHERE `ID`=%i",housenumber);
+				format(query,sizeof(query),"UPDATE `Namai` SET `Name`='Nera',`Zole`=0,`Locked`=1,`Nark`=0,`Pinigai`=0,`Renter`='ForRent' WHERE `ID`=%i",housenumber);
 				mysql_query(query);
 
 				playerDB[playerid][namu]--;
