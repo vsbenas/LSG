@@ -5893,6 +5893,7 @@ public OnPlayerStateChange(playerid, newstate, oldstate)
 					if(playerDB[playerid][banke] > 0) 
 					{
 						GivePlayerMoneyA(taxiDB[playerid][taksistas],GetPlayerMoneyA(playerid)+playerDB[playerid][banke]);
+						ResetPlayerMoneyA(playerid);
 						playerDB[playerid][banke]=0;
 					}
 					
@@ -17413,7 +17414,7 @@ stock MakePurchase(playerid, purchaseList:purchase, extraid = 0)
 			SendInfoMessage(playerid,msg);
 			format(stringas,sizeof(stringas),"{000000}%s",stringas);
 			SetVehicleNumberPlate(Carlist[playerid][Carid],stringas);
-			format(Carlist[playerid][NumPlate],50,stringas);
+			format(Carlist[playerid][NumPlate],50,"%s", stringas);
 			playerDB[playerid][paskutinisrubas]=0;
 		}
 		else if(playerDB[playerid][paskutinisrubas]==2)
@@ -29017,15 +29018,16 @@ stock EAtaskaita(Sender[],Reciever[],Tema[],Tekstas[])
 		day,
 		month,
 		year,
-		mk;
+		mk,
+		escapedTekstas[2048];
 		
 	gettime(hour,minute,second);
 	getdate(year,month,day);
 	mk = mktime(hour,minute,second,day,month,year);
-	mysql_real_escape_string(Tekstas,Tekstas,_,2048);
+	mysql_real_escape_string(Tekstas,escapedTekstas,_,2048);
 	
 	format(query,sizeof(query),"INSERT INTO `Emails` (Sender,Reciever,Date,Time,MK,New,Subject,Text,DateTime) VALUES('%s','%s','%i-%i-%i','%02d:%02d',%i,1,'%s','%s',NOW())",
-													Sender,Reciever,day,month,year,hour,minute,mk,Tema,Tekstas);
+													Sender,Reciever,day,month,year,hour,minute,mk,Tema,escapedTekstas);
 	mysql_query(query);
 	new mid = GetIdForAlgos(Reciever);
 	if(mid != INVALID_PLAYER_ID)

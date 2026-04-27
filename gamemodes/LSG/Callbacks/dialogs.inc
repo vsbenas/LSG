@@ -13504,7 +13504,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				mysql_real_escape_string(inputtext,inputtext,_,256);
 				if(strlen(inputtext) > 50 || strlen(inputtext) < 2 || strfind(inputtext,"\n",true) != -1 || strfind(inputtext,"{",true) != -1 || strfind(inputtext,"}",true) != -1 || strfind(inputtext,"|",true) != -1 ) return ShowPlayerDialog(playerid,DIALOGID+30,DIALOG_STYLE_INPUT,"Kurti","Irasykite gavejo varda.\nFormatas - Vardas_Pavarde\nMasine zinute:\n\r@g - gaujos nariams(gali naudoti tik gaujos savininkas)\n\r@d - darbuotojams(gali naudoti tik direktorius)\nNetinkamas formatas!","Gerai","Atgal");
-				format(RecieverP[playerid],50,inputtext);
+				format(RecieverP[playerid],50,"%s", inputtext);
 				ShowPlayerDialog(playerid,DIALOGID+31,DIALOG_STYLE_INPUT,"Kurti","Irasykite tema.\nSimboliu limitas: 100.","Gerai","Atgal");
 				return 1;
 			}
@@ -13521,7 +13521,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				mysql_real_escape_string(inputtext,inputtext,_,256);
 				if(strlen(inputtext) > 98 || strlen(inputtext) < 2 || strfind(inputtext,"\n",true) != -1 || strfind(inputtext,"{",true) != -1 || strfind(inputtext,"}",true) != -1 || strfind(inputtext,"|",true) != -1) return ShowPlayerDialog(playerid,DIALOGID+31,DIALOG_STYLE_INPUT,"Kurti","Irasykite tema.\nSimboliu limitas: 100.\nNetinkamas formatas!","Gerai","Atgal");
-				format(SubjectP[playerid],100,inputtext);
+				format(SubjectP[playerid],100,"%s", inputtext);
 				SetPVarInt(playerid, "MsgLines", 0);
 				SetPVarString(playerid, "MsgText", "");
 				ShowPlayerDialog(playerid,DIALOGID+32,DIALOG_STYLE_INPUT,"Kurti","Èia galite rağyti şinutæ.\nEiluèiø limitas: 10.\nParağæ şinutæ turësite progà dar kartà jà perşiûrëti prieğ iğsiunèiant.","Enter","Atgal");
